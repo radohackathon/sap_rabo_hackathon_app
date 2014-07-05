@@ -1,19 +1,21 @@
-//
-//  AppDelegate.m
-//  sapraboapp
-//
-//  Created by Hamdi, Louenas on 2014-07-04.
-//  Copyright (c) 2014 SAP. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.geoLocManagerSingleton = [GeoLocationManager singleton];
+    
+    if(launchOptions)
+        [self.geoLocManagerSingleton consumeSystemNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey]];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    NSLog(@"didReceiveLocalNotification");
+    
+    [self.geoLocManagerSingleton consumeSystemNotification:notification];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

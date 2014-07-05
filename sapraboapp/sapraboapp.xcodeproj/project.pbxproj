@@ -14,13 +14,15 @@
 		F55ED8B2196766EA002F4B7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8B1196766EA002F4B7F /* main.m */; };
 		F55ED8B6196766EA002F4B7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8B5196766EA002F4B7F /* AppDelegate.m */; };
 		F55ED8B9196766EA002F4B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55ED8B7196766EA002F4B7F /* Main.storyboard */; };
-		F55ED8BC196766EA002F4B7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8BB196766EA002F4B7F /* ViewController.m */; };
+		F55ED8BC196766EA002F4B7F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8BB196766EA002F4B7F /* MainViewController.m */; };
 		F55ED8BE196766EA002F4B7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55ED8BD196766EA002F4B7F /* Images.xcassets */; };
 		F55ED8C5196766EA002F4B7F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ED8C4196766EA002F4B7F /* XCTest.framework */; };
 		F55ED8C6196766EA002F4B7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ED8A5196766EA002F4B7F /* Foundation.framework */; };
 		F55ED8C7196766EA002F4B7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ED8A9196766EA002F4B7F /* UIKit.framework */; };
 		F55ED8CF196766EA002F4B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55ED8CD196766EA002F4B7F /* InfoPlist.strings */; };
 		F55ED8D1196766EA002F4B7F /* sapraboappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8D0196766EA002F4B7F /* sapraboappTests.m */; };
+		F55ED8DE196768B2002F4B7F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8DB196768B2002F4B7F /* BaseViewController.m */; };
+		F55ED8DF196768B2002F4B7F /* GeoLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8DD196768B2002F4B7F /* GeoLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,19 @@
 		F55ED8B4196766EA002F4B7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F55ED8B5196766EA002F4B7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F55ED8B8196766EA002F4B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F55ED8BA196766EA002F4B7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F55ED8BB196766EA002F4B7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F55ED8BA196766EA002F4B7F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F55ED8BB196766EA002F4B7F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F55ED8BD196766EA002F4B7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F55ED8C3196766EA002F4B7F /* sapraboappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sapraboappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55ED8C4196766EA002F4B7F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F55ED8CC196766EA002F4B7F /* sapraboappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sapraboappTests-Info.plist"; sourceTree = "<group>"; };
 		F55ED8CE196766EA002F4B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F55ED8D0196766EA002F4B7F /* sapraboappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sapraboappTests.m; sourceTree = "<group>"; };
+		F55ED8DA196768B2002F4B7F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		F55ED8DB196768B2002F4B7F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F55ED8DC196768B2002F4B7F /* GeoLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocationManager.h; sourceTree = "<group>"; };
+		F55ED8DD196768B2002F4B7F /* GeoLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocationManager.m; sourceTree = "<group>"; };
+		F55ED8E019676F5B002F4B7F /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +119,16 @@
 		F55ED8AB196766EA002F4B7F /* sapraboapp */ = {
 			isa = PBXGroup;
 			children = (
+				F55ED8E019676F5B002F4B7F /* MyConstants.h */,
+				F55ED8DA196768B2002F4B7F /* BaseViewController.h */,
+				F55ED8DB196768B2002F4B7F /* BaseViewController.m */,
+				F55ED8DC196768B2002F4B7F /* GeoLocationManager.h */,
+				F55ED8DD196768B2002F4B7F /* GeoLocationManager.m */,
 				F55ED8B4196766EA002F4B7F /* AppDelegate.h */,
 				F55ED8B5196766EA002F4B7F /* AppDelegate.m */,
 				F55ED8B7196766EA002F4B7F /* Main.storyboard */,
-				F55ED8BA196766EA002F4B7F /* ViewController.h */,
-				F55ED8BB196766EA002F4B7F /* ViewController.m */,
+				F55ED8BA196766EA002F4B7F /* MainViewController.h */,
+				F55ED8BB196766EA002F4B7F /* MainViewController.m */,
 				F55ED8BD196766EA002F4B7F /* Images.xcassets */,
 				F55ED8AC196766EA002F4B7F /* Supporting Files */,
 			);
@@ -249,7 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55ED8BC196766EA002F4B7F /* ViewController.m in Sources */,
+				F55ED8BC196766EA002F4B7F /* MainViewController.m in Sources */,
+				F55ED8DE196768B2002F4B7F /* BaseViewController.m in Sources */,
+				F55ED8DF196768B2002F4B7F /* GeoLocationManager.m in Sources */,
 				F55ED8B6196766EA002F4B7F /* AppDelegate.m in Sources */,
 				F55ED8B2196766EA002F4B7F /* main.m in Sources */,
 			);
