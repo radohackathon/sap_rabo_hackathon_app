@@ -23,6 +23,7 @@
 		F55ED8D1196766EA002F4B7F /* sapraboappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8D0196766EA002F4B7F /* sapraboappTests.m */; };
 		F55ED8DE196768B2002F4B7F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8DB196768B2002F4B7F /* BaseViewController.m */; };
 		F55ED8DF196768B2002F4B7F /* GeoLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F55ED8DD196768B2002F4B7F /* GeoLocationManager.m */; };
+		F562629C1967FAE1002A2616 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F562629B1967FAE1002A2616 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		F55ED8DC196768B2002F4B7F /* GeoLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocationManager.h; sourceTree = "<group>"; };
 		F55ED8DD196768B2002F4B7F /* GeoLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocationManager.m; sourceTree = "<group>"; };
 		F55ED8E019676F5B002F4B7F /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
+		F562629A1967FAE1002A2616 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F562629B1967FAE1002A2616 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				F55ED8B7196766EA002F4B7F /* Main.storyboard */,
 				F55ED8BA196766EA002F4B7F /* MainViewController.h */,
 				F55ED8BB196766EA002F4B7F /* MainViewController.m */,
+				F562629A1967FAE1002A2616 /* SecondViewController.h */,
+				F562629B1967FAE1002A2616 /* SecondViewController.m */,
 				F55ED8BD196766EA002F4B7F /* Images.xcassets */,
 				F55ED8AC196766EA002F4B7F /* Supporting Files */,
 			);
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F562629C1967FAE1002A2616 /* SecondViewController.m in Sources */,
 				F55ED8BC196766EA002F4B7F /* MainViewController.m in Sources */,
 				F55ED8DE196768B2002F4B7F /* BaseViewController.m in Sources */,
 				F55ED8DF196768B2002F4B7F /* GeoLocationManager.m in Sources */,
@@ -470,6 +476,7 @@
 				F55ED8D6196766EA002F4B7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F55ED8D7196766EA002F4B7F /* Build configuration list for PBXNativeTarget "sapraboappTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +485,7 @@
 				F55ED8D9196766EA002F4B7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

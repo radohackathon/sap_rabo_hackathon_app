@@ -1,4 +1,5 @@
 #import "BaseViewController.h"
+#import "SecondViewController.h"
 
 @interface BaseViewController ()
 
@@ -19,7 +20,7 @@
     
     UILocalNotification * localNotif = [[UILocalNotification alloc] init];
     localNotif.alertAction = @"to see the offer";
-    localNotif.applicationIconBadgeNumber = 1;
+    //localNotif.applicationIconBadgeNumber = 1;
     localNotif.alertBody = @"Buy at our store and get 20% off for your wife's birthday gift";
     localNotif.soundName = UILocalNotificationDefaultSoundName;
     localNotif.fireDate = [NSDate dateWithTimeIntervalSinceNow:1];
@@ -37,22 +38,38 @@
         return;
     }
     
-    if(![notification.userInfo objectForKey:UUID_STRING] || ![notification.userInfo objectForKey:MAJOR_STRING] || ![notification.userInfo objectForKey:MINOR_STRING]){
+    if(!notification.userInfo [UUID_STRING] || !notification.userInfo[MAJOR_STRING] || !notification.userInfo[MINOR_STRING]){
         NSLog(@"some of uuid or major or minor are not valid");
         return;
     }
    
-    //navigate to the screen showing the notification
-
-    //MainViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"];
-    //viewController.receivedData = @"yahoooooo!";
-    //[self.navigationController pushViewController:viewController animated:YES];
+    //option1: display alert
+    [self displayAlert:notification];
     
-    NSString *msg = [NSString stringWithFormat:@"%@, %@, %@, %@", notification.alertBody, [notification.userInfo objectForKey:UUID_STRING] , [notification.userInfo objectForKey:MAJOR_STRING] , [notification.userInfo objectForKey:MINOR_STRING]];
+    //option2: push event to notification center
+    [self pushNotificationCenter:notification];
+
+    //option3: navigate to other screen
+    //navigate to the screen showing the notification
+    //SecondViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondViewController"];
+    //viewController.receivedData = msg;
+    //[self presentViewController:viewController animated:YES completion:nil];
+    
+}
+
+-(void) displayAlert:(UILocalNotification *) notification{
+    NSString *msg = [NSString stringWithFormat:@"%@, %@, %@, %@", notification.alertBody, notification.userInfo[UUID_STRING] , notification.userInfo [MAJOR_STRING] , notification.userInfo[MINOR_STRING]];
     
     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [myAlertView show];
+}
+
+-(void) pushNotificationCenter:(UILocalNotification *) notification{
+    NSLog(@"pushNotificationCenter");
     
+    NSDictionary *notificationCenterMessage = @{UUID_STRING:notification.userInfo [UUID_STRING], MAJOR_STRING:notification.userInfo[MAJOR_STRING], MINOR_STRING:notification.userInfo[MINOR_STRING], @"ALERT_BODY":notification.alertBody};
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BEACONS_NOTIF_CENTER" object:self userInfo:notificationCenterMessage];
 }
 
 #pragma clean

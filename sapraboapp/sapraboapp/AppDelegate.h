@@ -7,4 +7,6 @@
 
 @property (strong, nonatomic) GeoLocationManager *geoLocManagerSingleton;;
 
+- (void) resetDemo;
+
 @end

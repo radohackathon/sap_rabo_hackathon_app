@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : BaseViewController
+
+@property (nonatomic, strong) IBOutlet UILabel *messageLabel;
 
 @end

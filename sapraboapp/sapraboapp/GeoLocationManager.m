@@ -1,5 +1,4 @@
 #import "GeoLocationManager.h"
-#import "MyConstants.h"
 
 @interface GeoLocationManager ()
 
@@ -109,6 +108,5 @@
         //[manager stopRangingBeaconsInRegion:region];
     }
 }
-
 
 @end

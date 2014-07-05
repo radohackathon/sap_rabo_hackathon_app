@@ -1,8 +1,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-
 #import "MyConstants.h"
-#import "MainViewController.h"
 
 @interface BaseViewController : UIViewController
 
@@ -12,6 +10,6 @@
 @property (strong, nonatomic) NSMutableDictionary *encountredBecons;
 
 - (void) consumeSystemNotification:(UILocalNotification *)notification;
--(void) pushSystemNotification:(NSDictionary *) beacon;
+- (void) pushSystemNotification:(NSDictionary *) beacon;
 
 @end

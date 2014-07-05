@@ -2,10 +2,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BaseViewController.h"
 
-@interface  MainViewController : UIViewController
+@interface  MainViewController : BaseViewController
 
-    @property (nonatomic, strong) IBOutlet UILabel *messageLabel;
-    @property (nonatomic, strong) NSString *receivedData;
+@property (strong, nonatomic) IBOutlet UILabel *messageLabel;
 
+- (IBAction)resetDemo:(id)sender;
 
 @end
