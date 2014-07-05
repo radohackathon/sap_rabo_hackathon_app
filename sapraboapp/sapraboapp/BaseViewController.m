@@ -44,7 +44,6 @@
    
     //navigate to the screen showing the notification
 
-    //NSLog(@"System notification tapped");
     //MainViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"];
     //viewController.receivedData = @"yahoooooo!";
     //[self.navigationController pushViewController:viewController animated:YES];
